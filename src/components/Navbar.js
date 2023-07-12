@@ -113,16 +113,21 @@ const Navbar = () => {
               <IconButton component={Link} to={'/users/' + username}>
                 <UserAvatar width={30} height={30} username={user.username} />
               </IconButton>
+              
               <Button onClick={handleLogout} color='secondary'>Logout</Button>
             </>
           ) : (
             <>
+              <Link to='/signup'>
               <Button variant='text' sx={{ minWidth: 80 }} href='/signup' color='secondary'>
                 Sign Up
               </Button>
+              </Link>
+              <Link to='/login'>
               <Button variant='text' sx={{ minWidth: 65 }} href='/login' color='secondary'>
                 Login
               </Button>
+              </Link>              
             </>
           )}
         </HorizontalStack>
